@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Laboratório visual de algoritmos: ordenação, busca e labirinto em JavaScript.">
+  <title>algorithm-lab</title>
+  <link rel="stylesheet" href="src/styles/base.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1 class="app-title">algorithm-lab</h1>
+    <nav class="tabs" role="tablist" aria-label="Módulos">
+      <button class="tab is-active" type="button" role="tab" aria-selected="true" data-module="sorting">Ordenação</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-module="search">Busca</button>
+      <button class="tab" type="button" role="tab" aria-selected="false" data-module="maze">Labirinto</button>
+    </nav>
+  </header>
+
+  <main class="app-main">
+    <section id="sorting" class="panel" role="tabpanel">
+      <h2 class="panel-title">Ordenação</h2>
+      <div id="sorting-root"></div>
+    </section>
+    <section id="search" class="panel" role="tabpanel" hidden>
+      <h2 class="panel-title">Busca</h2>
+      <div id="search-root"></div>
+    </section>
+    <section id="maze" class="panel" role="tabpanel" hidden>
+      <h2 class="panel-title">Labirinto</h2>
+      <div id="maze-root"></div>
+    </section>
+  </main>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
