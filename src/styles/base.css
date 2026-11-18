@@ -1,0 +1,105 @@
+﻿:root {
+  --color-bg: #1b1b24;
+  --color-surface: #25252f;
+  --color-text: #f5f0e1;
+  --color-border: #f5f0e1;
+  --color-accent: #ff5c9d;
+  --color-on-accent: #111111;
+  --color-bar: #8b93ff;
+  --color-bar-min: #fde047;
+  --color-bar-max: #5eead4;
+  --border: 2px solid var(--color-border);
+  --radius: 4px;
+  --font-body: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+.app-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  border-bottom: var(--border);
+}
+
+.app-title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.tab {
+  padding: 0.5rem 1rem;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 3px 3px 0 var(--color-accent);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 80ms, box-shadow 80ms;
+}
+
+.tab:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--color-accent);
+}
+
+.tab:active {
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}
+
+.tab.is-active {
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+}
+
+.tab:focus-visible {
+  outline: 3px solid var(--color-bar-min);
+  outline-offset: 3px;
+}
+
+.app-main {
+  max-width: 64rem;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+.panel {
+  padding: 1.5rem;
+  background: var(--color-surface);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 0 var(--color-accent);
+}
+
+.panel-title {
+  margin: 0 0 1rem;
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+}
