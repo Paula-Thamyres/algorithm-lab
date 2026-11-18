@@ -1,4 +1,7 @@
-﻿const ACTIVE_TAB_CLASS = 'is-active';
+﻿import { initSortingView } from './modules/sorting/sorting-view.js';
+
+const ACTIVE_TAB_CLASS = 'is-active';
+const SORTING_ROOT_ID = 'sorting-root';
 
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
@@ -24,3 +27,5 @@ function showModule(moduleId) {
 tabs.forEach((tab) => {
   tab.addEventListener('click', () => showModule(tab.dataset.module));
 });
+
+initSortingView(document.getElementById(SORTING_ROOT_ID));
